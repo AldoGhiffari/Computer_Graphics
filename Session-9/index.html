@@ -1,0 +1,89 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Converter</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container my-5">
+      <h1 class="text-center mb-4">Image Converter</h1>
+      <form id="uploadForm" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="image" class="form-label">Upload Your Image:</label>
+          <input
+            type="file"
+            class="form-control"
+            id="image"
+            name="image"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="option" class="form-label">Select an Option:</label>
+          <select class="form-select" id="option" name="option">
+            <option value="grayscale">Grayscale</option>
+            <option value="blur">Blur</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Convert</button>
+      </form>
+      <div id="result" class="mt-5" style="display: none">
+        <h2>Conversion Result</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Original Image:</h5>
+            <img
+              id="originalImage"
+              src=""
+              alt="Original Image"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-6">
+            <h5>Processed Image:</h5>
+            <img
+              id="processedImage"
+              src=""
+              alt="Processed Image"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Image Converter</h1>
+      <input type="file" id="upload" accept="image/*" />
+      <div class="canvas-container">
+        <canvas id="originalCanvas"></canvas>
+        <canvas id="editedCanvas"></canvas>
+      </div>
+      <div class="button-group">
+        <button id="grayscale">Grayscale</button>
+        <button id="blur">Blur</button>
+        <button id="goBack">Undo</button>
+        <button id="download">Download</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
